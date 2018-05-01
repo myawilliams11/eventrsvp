@@ -1,0 +1,60 @@
+html
+    head
+        title
+            RSVP Form
+
+    body
+        form(
+            action= "/route"     
+            method="get"
+            enctype="multipart/form-data"
+        )
+            h1
+                RSVP Here!        
+
+            div 
+                label(
+                for="Name"
+                type="text"
+                id="name"
+                name="guest_name"
+            )     
+
+            div
+                label(
+                for="email"
+                type="text"
+                id="email"
+                name="guest_email" 
+            )  
+
+            div
+                label(
+                for="attending"  
+                type"radio"
+                id="attending"
+                option (value="yes") I'll be there!
+                option (value="no") I can't make it
+                name="guest_attendance"  
+            )
+
+            div 
+                label(
+                    select
+                    for="number"
+                    id="number"
+                    option(value="1") one
+                    option(value="2") two
+                    option(value="3") three
+                    option(value="4") four
+                    option(value="5") five
+                    option(value="6") six
+                    option(value="7") seven
+                    option(value="8") eight
+                    name="total_party" 
+            )         
+
+            button(
+                type= 'Submit'
+                style= 'width= 20px; height: 10px'
+                ) upload 
