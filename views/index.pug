@@ -5,9 +5,9 @@ html
 
     body
         form(
-            action= "/"     
-            method="get"
-            enctype="multipart/form-data"
+            action= "/reply"     
+            method="post"
+            
         )
             h1
                 RSVP RSVP Here!        
@@ -19,7 +19,7 @@ html
                 id="name"
             )   
                 | Guest Name  
-                input(type="text" name="guest_name" value=" ")
+                input(type="text" name="name" value=" ")
                 
 
             div
@@ -28,7 +28,7 @@ html
                 id="email"
             )  
                 | Guest E-mail
-                input(type="text" name="guest_email" value= " ")
+                input(type="text" name="email" value= " ")
                 
 
             div
@@ -38,31 +38,29 @@ html
             )
                 | Response:
                 | I'll be there
-                input(type="radio" name="guest_attendance" value="yes")
+                input(type="radio" name="attending" value="true")
                 | I can't make it                
-                input(type="radio" name="guest_attendance" value="no")
+                input(type="radio" name="attending" value="false")
 
 
             div               
                 label(
                     for="number"
                     id="number"
-                    name="total_party"
+                    
                 ) 
                 | How many guests in your party?     
                 select  
-                        option(value="1") one
-                        option(value="2") two
-                        option(value="3") three
-                        option(value="4") four
-                        option(value="5") five
-                        option(value="6") six
-                        option(value="7") seven
-                        option(value="8") eight                   
-
-            button(
-                type= 'Submit'
-                style= 'width= 20px; height: 10px'
-                ) upload 
-
-                
+                        option(value="1" name="guests") one
+                        option(value="2" name="guests") two
+                        option(value="3" name="guests") three
+                        option(value="4" name="guests") four
+                        option(value="5" name="guests") five
+                        option(value="6" name="guests") six
+                        option(value="7" name="guests") seven
+                        option(value="8" name="guests") eight                   
+            div
+                button(
+                    type='submit'
+                    style='width= 20px; height: 10px'
+                    ) submit 
